@@ -18,9 +18,7 @@ namespace AdventOfCode
                 var range = newItem[0].Split("-");
                 if (Convert.ToInt32(range[0]) <= newItem[2].Count(l => l == Convert.ToChar(newItem[1])) 
                     && newItem[2].Count(l => l == Convert.ToChar(newItem[1])) <= Convert.ToInt32(range[1]))
-                {
                     counter += 1;
-                }
             }
             Console.WriteLine(counter);
         }
@@ -34,12 +32,12 @@ namespace AdventOfCode
             {
                 var newItem = item.Replace(":", "").Split(" ");
                 var range = newItem[0].Split("-");
-                if (newItem[2][Convert.ToInt32(range[0])-1] == Convert.ToChar(newItem[1])
-                    && newItem[2][Convert.ToInt32(range[1])-1] != Convert.ToChar(newItem[1]))
+                if (newItem[2][Convert.ToInt32(range[0]) - 1] == Convert.ToChar(newItem[1])
+                    && newItem[2][Convert.ToInt32(range[1]) - 1] != Convert.ToChar(newItem[1]))
                 { counter += 1; }
                 else if (newItem[2][Convert.ToInt32(range[0]) - 1] != Convert.ToChar(newItem[1])
                     && newItem[2][Convert.ToInt32(range[1]) - 1] == Convert.ToChar(newItem[1]))
-                { counter += 1; }
+                    counter += 1;
 
             }
             Console.WriteLine(counter);
