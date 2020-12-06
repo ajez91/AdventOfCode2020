@@ -24,10 +24,15 @@ namespace AdventOfCode
             //day3.CountTree(3,1);
             //day3.ThroughSlopes();
 
-            Console.WriteLine("* * * DAY 4 * * *");
-            var day4 = new Day4();
-            day4.ValidPassports();
-            day4.ValidatePassportsByRules();
+            //Console.WriteLine("* * * DAY 4 * * *");
+            //var day4 = new Day4();
+            //day4.ValidPassports();
+            //day4.ValidatePassportsByRules();
+
+            Console.WriteLine("* * * DAY 5 * * *");
+            var day5 = new Day5();
+            day5.GetHighestId();
+
         }
     }
 }
