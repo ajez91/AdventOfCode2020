@@ -29,10 +29,14 @@ namespace AdventOfCode
             //day4.ValidPassports();
             //day4.ValidatePassportsByRules();
 
-            Console.WriteLine("* * * DAY 5 * * *");
-            var day5 = new Day5();
-            day5.GetHighestId();
-            day5.GetFreeSeat();
+            //Console.WriteLine("* * * DAY 5 * * *");
+            //var day5 = new Day5();
+            //day5.GetHighestId();
+            //day5.GetFreeSeat();
+
+            Console.WriteLine("* * * DAY 6 * * *");
+            var day6 = new Day6();
+            day6.GetAnswers();
 
         }
     }
