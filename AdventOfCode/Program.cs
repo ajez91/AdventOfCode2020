@@ -32,6 +32,7 @@ namespace AdventOfCode
             Console.WriteLine("* * * DAY 5 * * *");
             var day5 = new Day5();
             day5.GetHighestId();
+            day5.GetFreeSeat();
 
         }
     }

@@ -8,6 +8,8 @@ namespace AdventOfCode2020
 {
     public class Day5
     {
+
+
         public int GetHighestId()
         {
             var input = File.ReadAllLines("Day5/day5.txt").ToList();
@@ -19,7 +21,30 @@ namespace AdventOfCode2020
                 var seatId = CalculateColumn(item) * 8 + CalculateSeat(item);
                 if (seatId > max) max = seatId;
             }
+            Console.WriteLine(max);
             return max;
+        }
+
+        public int GetFreeSeat()
+        {
+            var input = File.ReadAllLines("Day5/day5.txt").ToList();
+            List<int> seats = new List<int>();
+            int mySeat =0;
+
+            foreach (var item in input)
+            {
+                seats.Add(CalculateColumn(item) * 8 + CalculateSeat(item));
+            }
+
+            seats.Sort();
+
+            for (int i = 1; i < seats.Count; i++)
+            {
+                if (seats[i] - seats[i - 1] == 2) mySeat = seats[i] - 1;
+            }
+
+            Console.WriteLine(mySeat);
+            return mySeat;
         }
 
         public int CalculateColumn(string code)
