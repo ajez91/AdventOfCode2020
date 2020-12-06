@@ -9,8 +9,6 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-
-
             //Console.WriteLine("* * * DAY 1 * * *");
             //var day1 = new Day1();
             //day1.Get2020();
@@ -26,13 +24,10 @@ namespace AdventOfCode
             //day3.CountTree(3,1);
             //day3.ThroughSlopes();
 
-            //Console.WriteLine("* * * DAY 3 * * *");
+            Console.WriteLine("* * * DAY 4 * * *");
             var day4 = new Day4();
-
             day4.ValidPassports();
-
-
-
+            day4.ValidatePassportsByRules();
         }
     }
 }
