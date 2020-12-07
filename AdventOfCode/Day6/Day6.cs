@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace AdventOfCode2020
@@ -13,13 +11,21 @@ namespace AdventOfCode2020
 
         public Day6()
         {
-            _groups = File.ReadAllText("Day6/day6.txt.").Split(Environment.NewLine + Environment.NewLine);
+            _groups = File.ReadAllText("Day6/day6.txt.").Split("\r\n"+ "\r\n");
         }
 
-        public void GetAnswers()
+        public int GetAnswers()
         {
             var query = _groups.Sum(g => RemoveWhitespace(g).Distinct().Count());
             Console.WriteLine(query);
+            return query;
+        }
+
+        public int GetEveryoneAnswers()
+        {
+            var counter = _groups.Sum(group =>group.GroupBy(g => g).Count(l => l.Count() == group.Split("\n").Length));
+            Console.WriteLine(counter);
+            return counter;
         }
 
         public string RemoveWhitespace(string s)=> Regex.Replace(s, @"\s", string.Empty);
