@@ -34,11 +34,14 @@ namespace AdventOfCode
             //day5.GetHighestId();
             //day5.GetFreeSeat();
 
-            Console.WriteLine("* * * DAY 6 * * *");
-            var day6 = new Day6();
-            day6.GetAnswers();
-            day6.GetEveryoneAnswers();
+            //Console.WriteLine("* * * DAY 6 * * *");
+            //var day6 = new Day6();
+            //day6.GetAnswers();
+            //day6.GetEveryoneAnswers();
 
+            Console.WriteLine("* * * DAY 7 * * *");
+            var day7 = new Day7();
+            day7.GetShinyGoldBags();
         }
     }
 }
