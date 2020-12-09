@@ -37,7 +37,6 @@ namespace AdventOfCode
             Console.WriteLine("* * * DAY 6 * * *");
             var day6 = new Day6();
             day6.GetAnswers();
-            day6.GetEveryoneAnswers();
 
         }
     }
